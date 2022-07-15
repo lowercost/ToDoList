@@ -1,0 +1,113 @@
+:root{
+    --white:#fafafb;
+    --purple:#9a67ea;
+    --blue-light:#04d4c3;
+    --blue-dark:#2a73c2;
+    --green:#2c7b90;
+}
+
+body{
+    background: linear-gradient(to bottom,var(--purple),var(--blue-light));
+    height: 100vh;
+    font-family: 'Edu TAS Beginner', cursive;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+    /*Profile*/
+
+.profile h1 {
+    color: var(--white);
+}
+
+.profile span {
+    position: relative;
+    top: -20px;
+    color: var(--white);
+    letter-spacing: 6px;
+    font-family: 'Edu TAS Beginner';
+}
+
+#date {
+    color: var(--white);
+    padding: 50px 0 5px 0;
+}
+
+
+    /*New To Do*/
+
+.new-todo {
+background-color: var(--white);
+border-radius: 15px;
+height: 70px;
+display: flex;
+align-items: center;
+padding: 10px;
+gap: 70px;
+}
+
+.new-todo input {
+width: 100%;
+height: 100%;
+border-radius: 8px;
+border: none;
+background-color: var(--white);
+}
+
+.new-todo i {
+font-size: 50px;
+color: var(--purple);
+}
+
+.new-todo i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.new-todo input::placeholder {
+    font-size: 1.1rem;
+    color: var(--purple);
+}
+
+    /*To Do Section*/
+
+.todo-section h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.todo-section li {
+    display: flex;
+    background: linear-gradient(to bottom,var(--blue-dark),var(--green));
+    border-radius: 15px;
+    padding:10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    color: var(--white);
+}
+
+.todo-section i {
+    font-size: 25px;
+}
+
+.todo-section i:hover {
+    color: var(--blue-light);
+    cursor: pointer;
+}
+
+.todo-section ul p {
+    font-size: 1.2rem;
+}
+
+.line-through {
+    text-decoration: line-through;
+    color: var(--blue-light);
+}
