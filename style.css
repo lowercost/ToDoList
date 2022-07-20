@@ -1,13 +1,22 @@
 :root{
     --white:#fafafb;
-    --purple:#9a67ea;
-    --blue-light:#04d4c3;
-    --blue-dark:#2a73c2;
-    --green:#2c7b90;
+    /*--backgroundColor1:#5b86e5;
+    --backgroundColor2:#36d1dc;*/
+    --blue-dark:#021b79;
+    --green:#0575e6;
+    --backgroundColor1:#4158D0;
+    --backgroundColor2:#C850C0;
+    --backgroundColor3:#FFCC70;
+    /*background-color: #4158D0;
+    background-image: linear-gradient(180deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);*/
+
 }
 
 body{
-    background: linear-gradient(to bottom,var(--purple),var(--blue-light));
+    /*background: linear-gradient(to bottom,var(--backgroundColor1),var(--backgroundColor2));*/
+    background-color: var(--backgroundColor1);
+    background: linear-gradient(to bottom, var(--backgroundColor1) 0%, var(--backgroundColor2) 46%, var(--backgroundColor3) 100%);
+    background-attachment: fixed;
     height: 100vh;
     font-family: 'Edu TAS Beginner', cursive;
     font-family: 'Lato', sans-serif;
@@ -37,7 +46,7 @@ body{
 
 #date {
     color: var(--white);
-    padding: 50px 0 5px 0;
+    padding: 40px 0 5px 0;
 }
 
 
@@ -45,6 +54,7 @@ body{
 
 .new-todo {
 background-color: var(--white);
+box-shadow: -6px 8px 10px -1px rgba(0,0,0,0.75);
 border-radius: 15px;
 height: 70px;
 display: flex;
@@ -63,7 +73,7 @@ background-color: var(--white);
 
 .new-todo i {
 font-size: 50px;
-color: var(--purple);
+color: var(--backgroundColor1);
 }
 
 .new-todo i:hover {
@@ -73,25 +83,35 @@ color: var(--purple);
 
 .new-todo input::placeholder {
     font-size: 1.1rem;
-    color: var(--purple);
+    color: var(--backgroundColor1);
 }
 
     /*To Do Section*/
 
 .todo-section h3 {
     color: var(--white);
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+    position: relative;
+    top: 15px;
 }
 
 .todo-section li {
     display: flex;
     background: linear-gradient(to bottom,var(--blue-dark),var(--green));
-    border-radius: 15px;
-    padding:10px;
+    box-shadow: -6px 8px 10px -1px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    padding:15px;
     align-items: center;
     justify-content: space-between;
-    margin: 5px 0;
+    margin: 20px 0;
     color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.todo-section li:hover{
+    box-shadow: -6px 8px 10px -1px rgba(0,0,0,0.75);
+    padding: 16px;
+    background: linear-gradient(to bottom,var(--green),var(--blue-dark));
 }
 
 .todo-section i {
@@ -99,15 +119,16 @@ color: var(--purple);
 }
 
 .todo-section i:hover {
-    color: var(--blue-light);
+    color: var(--backgroundColor1);
     cursor: pointer;
 }
 
 .todo-section ul p {
     font-size: 1.2rem;
+    user-select: none;
 }
 
 .line-through {
     text-decoration: line-through;
-    color: var(--blue-light);
+    color: var(--backgroundColor2);
 }
