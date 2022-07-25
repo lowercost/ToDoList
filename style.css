@@ -1,19 +1,14 @@
 :root{
     --white:#fafafb;
-    /*--backgroundColor1:#5b86e5;
-    --backgroundColor2:#36d1dc;*/
     --blue-dark:#021b79;
     --green:#0575e6;
     --backgroundColor1:#4158D0;
     --backgroundColor2:#C850C0;
     --backgroundColor3:#FFCC70;
-    /*background-color: #4158D0;
-    background-image: linear-gradient(180deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);*/
 
 }
 
 body{
-    /*background: linear-gradient(to bottom,var(--backgroundColor1),var(--backgroundColor2));*/
     background-color: var(--backgroundColor1);
     background: linear-gradient(to bottom, var(--backgroundColor1) 0%, var(--backgroundColor2) 46%, var(--backgroundColor3) 100%);
     background-attachment: fixed;
@@ -123,12 +118,28 @@ color: var(--backgroundColor1);
     cursor: pointer;
 }
 
+.todo-section ul{
+    padding: 10px;
+}
+
 .todo-section ul p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     user-select: none;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .line-through {
     text-decoration: line-through;
-    color: var(--backgroundColor2);
+    color: var(--green);
+}
+
+/*Glass effect*/
+.glass-effect{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 32px 8px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 32px;
 }
